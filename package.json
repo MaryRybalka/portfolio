@@ -1,5 +1,9 @@
 {
-  "name": "nuxt-app",
+  "name": "portfolio",
+  "author": {
+    "name": "Mariia Krasnova",
+    "email": "masha_frog@icloud.com"
+  },
   "private": true,
   "scripts": {
     "build": "nuxt build",

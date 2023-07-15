@@ -1,6 +1,8 @@
 <template>
   <div id="cards-wrapper" class="cards-wrapper">
-    <Card v-for="card of cards" :id="card.id" :title="card.title"/>
+    <Card v-for="card of cards" :id="card.id">
+      <PersonalData/>
+    </Card>
   </div>
 </template>
 <script>
@@ -11,19 +13,19 @@ export default {
     cards: [
       {
         id: 'about',
-        title: 'My name is Masha 1'
+        title: 'My name is Masha 1',
       },
       {
         id: 'education',
-        title: 'My name is Masha 2'
+        title: 'My name is Masha 2',
       },
       {
         id: 'work',
-        title: 'My name is Masha 3'
+        title: 'My name is Masha 3',
       },
       {
         id: 'interests',
-        title: 'My name is Masha 4'
+        title: 'My name is Masha 4',
       },
     ]
   }),
@@ -39,6 +41,7 @@ export default {
 </script>
 
 <style scoped>
+
 .cards-wrapper {
   width: 100vw;
   height: 100vh;
@@ -47,7 +50,7 @@ export default {
   overflow: auto;
 
   background: radial-gradient(circle at 50% 0, rgba(0, 60, 255, 1), rgba(255, 0, 66, 0.97)),
-  url(/public/noise.svg);
+  url(/noise.svg);
 
   scroll-snap-type: y mandatory;
 }

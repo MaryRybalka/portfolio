@@ -7,9 +7,9 @@ export default {
   name: 'IntersectWrapper',
   props: {
     elementId: '',
+    timing: 20
   },
   data: () => ({
-    numSteps: 20.0,
     boxElement: null,
     prevRatio: 0.0,
     increasingOpacity: "1",
@@ -40,8 +40,8 @@ export default {
     buildThresholdList() {
       const thresholds = [];
 
-      for (let i = 1.0; i <= this.numSteps; i++) {
-        let ratio = i / this.numSteps;
+      for (let i = 1.0; i <= this.timing; i++) {
+        let ratio = i / this.timing;
         thresholds.push(ratio);
       }
 

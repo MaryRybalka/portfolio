@@ -1,7 +1,7 @@
 <template>
-  <IntersectWrapper :elementId="id">
+  <IntersectWrapper :elementId="id" :timing="20">
     <div :id="id" class="page-card">
-      <h1 class="page-card--title">{{ title }}</h1>
+      <slot/>
     </div>
   </IntersectWrapper>
 </template>
@@ -11,7 +11,6 @@ export default {
   name: 'Card',
   props: {
     id: '',
-    title: ''
   },
 }
 </script>
@@ -29,23 +28,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.page-card--title {
-  font-size: 32px;
-  color: white;
-}
-
-@media screen and (min-width: 720px) {
-  .page-card--title {
-    font-size: 64px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .page-card--title {
-    font-size: 128px;
-  }
 }
 
 </style>
